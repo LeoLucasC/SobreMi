@@ -1,0 +1,214 @@
+/* Variables de color */
+:root {
+    --color-primario: #2563eb;
+    --color-secundario: #1e40af;
+    --color-fondo: #f8fafc;
+    --color-texto: #1e293b;
+    --color-texto-claro: #64748b;
+    --blanco: #ffffff;
+    --sombra: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset y estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* Estilos de la cabecera */
+.cabecera {
+    background-color: var(--blanco);
+    box-shadow: var(--sombra);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.contenedor-cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-primario);
+}
+
+.logo h1 span {
+    color: var(--color-texto);
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    margin-left: 2rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--color-texto);
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.menu a:hover {
+    color: var(--color-primario);
+}
+
+.menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primario);
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+.menu-hamburguesa {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--color-primario);
+    cursor: pointer;
+}
+
+/* Estilos del hero */
+.hero {
+    padding: 8rem 2rem 4rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.contenedor-hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.texto-hero {
+    flex: 1;
+}
+
+.texto-hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.nombre-destacado {
+    color: var(--color-primario);
+}
+
+.texto-hero h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--color-texto-claro);
+    margin-bottom: 1rem;
+}
+
+.texto-hero p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: var(--color-texto-claro);
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--color-primario);
+    color: var(--blanco);
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--color-secundario);
+}
+
+.imagen-hero {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.foto-perfil {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .contenedor-cabecera {
+        padding: 1rem;
+    }
+
+    .menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: var(--blanco);
+        transition: left 0.3s ease;
+    }
+
+    .menu.active {
+        left: 0;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .menu li {
+        margin: 1rem 0;
+    }
+
+    .menu-hamburguesa {
+        display: block;
+    }
+
+    .contenedor-hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .texto-hero {
+        margin-bottom: 2rem;
+    }
+}
