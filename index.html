@@ -1,14 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mi Portafolio Moderno</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <title>HOLA MUNDO</title>
-    <H1>
-        "CARAJO"
-    </H1>
+    <header class="cabecera">
+        <div class="contenedor-cabecera">
+            <div class="logo">
+                <h1>Mi<span>Portafolio</span></h1>
+            </div>
+            <nav class="menu" id="menu">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre-mi">Sobre mí</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="menu-hamburguesa" id="menuHamburguesa">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero" id="inicio">
+        <div class="contenedor-hero">
+            <div class="texto-hero">
+                <h2>Hola, soy <span class="nombre-destacado">Leo Lucas</span></h2>
+                <h3>Desarrollador Web de sistemas multiplataformas y Marketing</h3>
+                <p>Creando software y Analisando Estudios de Mercadeo para Negocios  </p>
+                <a href="#contacto" class="btn">Contáctame</a>
+            </div>
+            <div class="imagen-hero">
+                <img src="https://via.placeholder.com/400x400" alt="Leo.png" class="foto-perfil">
+            </div>
+        </div>
+    </section>
+
+    <!-- Otras secciones del portafolio irían aquí -->
+
+    <script src="script.js"></script>
 </body>
 </html>
