@@ -173,14 +173,14 @@ body {
 .texto-hero h3 {
     font-size: 1.5rem;
     font-weight: 400;
-    color: var(--color-texto-claro);
+    color: white
     margin-bottom: 1rem;
 }
 
 .texto-hero p {
     font-size: 1.1rem;
     margin-bottom: 2rem;
-    color: var(--color-texto-claro);
+    color: white
 }
 
 .btn {
